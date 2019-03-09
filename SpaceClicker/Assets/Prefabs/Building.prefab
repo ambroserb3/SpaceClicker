@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3228919974057304135}
   - component: {fileID: 3228919974057304137}
   - component: {fileID: 3228919974057304136}
+  - component: {fileID: 2080491427}
+  - component: {fileID: 2080491426}
   m_Layer: 5
   m_Name: Building
   m_TagString: Untagged
@@ -74,3 +76,44 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!61 &2080491427
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228919974057304134}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -4.8883286}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 659.22754, y: 115.06084}
+  m_EdgeRadius: 0
+--- !u!114 &2080491426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228919974057304134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f8733a0141980449d10b28d02bdada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  built: {fileID: 4689872760854307699, guid: 0b35af8cc9b7de940a937b5a6849d061, type: 3}
+  builtBuilding: {fileID: 0}
+  buildingname: 

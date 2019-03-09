@@ -197,7 +197,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 18537059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b324f20ab0cc7844abf6c51e71770947, type: 3}
+  m_Script: {fileID: 11500000, guid: 162ae060aa9fcb94c88baa912594e71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   A: {fileID: 3228919974057304134, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
@@ -1171,6 +1171,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.4999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080491426, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
+      propertyPath: builtBuilding
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080491426, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
+      propertyPath: buildingname
+      value: Power
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
