@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlanetManager : MonoBehaviour
+public class ResourceManager : MonoBehaviour
 {
     public static int[] resources;
     public int Khyber;

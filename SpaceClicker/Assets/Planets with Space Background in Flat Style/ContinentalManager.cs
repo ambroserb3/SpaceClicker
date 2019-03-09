@@ -11,12 +11,18 @@ public class ContinentalManager : MonoBehaviour
     void Start()
     {
         buildings = new int[6];
+        buildings[0] = 0;
+        buildings[1] = 0;
+        buildings[2] = 0;
+        buildings[3] = 0;
+        buildings[4] = 0;
+        buildings[5] = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        resources = PlanetManager.getResources();
+        resources = ResourceManager.getResources();
     }
 
     public void build(string buildType)
@@ -37,7 +43,7 @@ public class ContinentalManager : MonoBehaviour
         resources[4] = resources[4] + 2;
         resources[5] = resources[5] + 4;
 
-        PlanetManager.resources = resources;
+        ResourceManager.resources = resources;
 
     }
 }

@@ -16,7 +16,7 @@ public class DryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        resources = PlanetManager.getResources();
+        resources = ResourceManager.getResources();
     }
 
 
@@ -30,7 +30,7 @@ public class DryManager : MonoBehaviour
         resources[4] = resources[4] + 2;
         resources[5] = resources[5] + 4;
 
-        PlanetManager.resources = resources;
+        ResourceManager.resources = resources;
 
     }
 }
