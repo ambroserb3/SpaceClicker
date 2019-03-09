@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlanetManager : MonoBehaviour
 {
     public static int[] resources;
+    public int Khyber;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +29,35 @@ public class PlanetManager : MonoBehaviour
         GameObject.Find("khyber").GetComponent<TextMesh>().text = "Khyber: " + resources[3];
         GameObject.Find("titanium").GetComponent<TextMesh>().text = "Titanium: " + resources[4];
         GameObject.Find("iridium").GetComponent<TextMesh>().text = "Iridium: " + resources[5];
+        Victory();
+
     }
+
+    //1. Food and Water reach a certain amount = Population Victory
+    //2. Metals reach a certain amount = Structure victory
+    //3. When energy reaches a certain amount = Energy Victory
 
     public static int[] getResources()
     {
         return resources;
     }
 
+    public void Victory()
+    {
+        if (resources[0] + resources[2] >= 200)
+        {
+            //SceneManager.LoadScene("PopVictory");
+            Debug.Log("Population Victory");
+        }
+        if (resources[3] + resources[4] + resources[5] >= 200)
+        {
+            //SceneManager.LoadScene("StructureVictory");
+            Debug.Log("Structure Victory");
+        }
+        if (resources[1] >= 200)
+        {
+            //SceneManager.LoadScene("EnergyVictory");
+            Debug.Log("Energy Victory");
+        }
+    }
 }
