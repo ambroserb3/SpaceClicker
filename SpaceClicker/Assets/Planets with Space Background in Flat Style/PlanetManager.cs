@@ -6,10 +6,14 @@ public class PlanetManager : MonoBehaviour
 {
     private int[] resources;
     private int[] buildings;
+    private int[] onClick;
+    private string name;
 
     // Start is called before the first frame update
     void Start()
     {
+        name = gameObject.name;
+
         buildings = new int[6];
         buildings[0] = 0;
         buildings[1] = 0;
@@ -23,25 +27,51 @@ public class PlanetManager : MonoBehaviour
     void Update()
     {
         resources = ResourceManager.getResources();
+        onClick = ToAdd(name, buildings);
     }
 
     public void build(string buildType)
     {
-        if (buildType.Equals("Mine"))
+        if (buildType.Equals("Power"))
         {
             buildings[0]++;
+        }
+
+        if (buildType.Equals("Mine"))
+        {
+            buildings[1]++;
+        }
+
+        if (buildType.Equals("B"))
+        {
+            buildings[2]++;
+        }
+
+        if (buildType.Equals("C"))
+        {
+            buildings[3]++;
+        }
+
+        if (buildType.Equals("D"))
+        {
+            buildings[4]++;
+        }
+
+        if (buildType.Equals("E"))
+        {
+            buildings[5]++;
         }
     }
 
     private void OnMouseDown()
     {
         print("huzzah");
-        resources[0] = resources[0] + 5;
-        resources[1] = resources[1] + 5 + 3 * buildings[1];
-        resources[2] = resources[2] + 3;
-        resources[3] = resources[3] + 1 + 20 * buildings[0];
-        resources[4] = resources[4] + 2;
-        resources[5] = resources[5] + 4;
+        resources[0] += onClick[0];
+        resources[1] += onClick[1];
+        resources[2] += onClick[2];
+        resources[3] += onClick[3];
+        resources[4] += onClick[4];
+        resources[5] += onClick[5];
 
         ResourceManager.resources = resources;
 
