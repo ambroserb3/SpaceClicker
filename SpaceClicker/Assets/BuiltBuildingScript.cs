@@ -23,16 +23,47 @@ public class BuiltBuildingScript : MonoBehaviour
         gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)) + new Vector3(0, 0, 10);
         if (Input.GetMouseButtonUp(0))
         {
+            planetcolliding = WhatPlanet();
+            print(planetcolliding);
+            print(buildingtype);
+            if (planetcolliding != "No-Planet"){
+                GameObject.Find(planetcolliding).GetComponent<PlanetManager>().build(buildingtype);
+            }
             Destroy(gameObject);
-        } 
+        }
     }
-    void OnMouseUp()
+
+    string WhatPlanet(){
+        Vector2 DarkPlanetPos = new Vector2(GameObject.Find("Dark-Planet").transform.position.x,GameObject.Find("Dark-Planet").transform.position.y);
+        Vector2 WaterPlanetPos = new Vector2(GameObject.Find("Water-Planet").transform.position.x,GameObject.Find("Water-Planet").transform.position.y);
+        Vector2 SandPlanetPos = new Vector2(GameObject.Find("Sand-Planet").transform.position.x,GameObject.Find("Sand-Planet").transform.position.y);
+        Vector2 EarthPlanetPos = new Vector2(GameObject.Find("Earth-Planet").transform.position.x,GameObject.Find("Earth-Planet").transform.position.y);
+
+        if (Vector2.Distance(new Vector2(transform.position.x,transform.position.y),(DarkPlanetPos)) < 1){
+            //print("DarkPlanet");
+            return "Dark-Planet";
+        }
+        if (Vector2.Distance(new Vector2(transform.position.x,transform.position.y),(WaterPlanetPos)) < 1){
+            //print("DarkPlanet");
+            return "Water-Planet";
+        }
+        if (Vector2.Distance(new Vector2(transform.position.x,transform.position.y),(SandPlanetPos)) < 1){
+            //print("DarkPlanet");
+            return "Sand-Planet";
+        }
+        if (Vector2.Distance(new Vector2(transform.position.x,transform.position.y),(EarthPlanetPos)) < 1){
+            //print("DarkPlanet");
+            return "Earth-Planet";
+        }
+        return "No-Planet";
+    }
+    /*void OnMouseUp()
     {
         print(planetcolliding);
         Destroy(gameObject);
-    }
+    }*/
 
-    void OnTriggerEnter(Collider other)
+    /*void OnTriggerEnter(Collider other)
     {
         print("hiay");
         planetcolliding = other.gameObject.name;
@@ -41,5 +72,5 @@ public class BuiltBuildingScript : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         planetcolliding = "";
-    }
+    }*/
 }
