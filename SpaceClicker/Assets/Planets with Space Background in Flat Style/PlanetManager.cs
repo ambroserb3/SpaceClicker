@@ -27,7 +27,7 @@ public class PlanetManager : MonoBehaviour
     void Update()
     {
         resources = ResourceManager.getResources();
-        onClick = ToAdd(name, buildings);
+        onClick = ResourceManager.ToAdd(name, buildings);
     }
 
     public void build(string buildType)
