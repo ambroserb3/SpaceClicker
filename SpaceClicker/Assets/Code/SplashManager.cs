@@ -9,11 +9,17 @@ public class SplashManager : MonoBehaviour
     [SerializeField]
     private float timer;
 
+
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(SplashManage);
+
         timer = 0;
+    }
+
+    private void Awake()
+    {
     }
 
     // Update is called once per frame
@@ -25,5 +31,6 @@ public class SplashManager : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
+
     }
 }

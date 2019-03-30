@@ -7,6 +7,7 @@ public class ResourceManager : MonoBehaviour
 {
     public static int[] resources;
     public int Khyber;
+    public AudioSource RusticHour;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class ResourceManager : MonoBehaviour
         resources[3] = 0;
         resources[4] = 0;
         resources[5] = 0;
+        RusticHour.Play(0);
     }
 
     // Update is called once per frame
@@ -48,16 +50,19 @@ public class ResourceManager : MonoBehaviour
         {
             //SceneManager.LoadScene("PopVictory");
             Debug.Log("Population Victory");
+            RusticHour.Stop();
         }
         if (resources[3] + resources[4] + resources[5] >= 200)
         {
             //SceneManager.LoadScene("StructureVictory");
             Debug.Log("Structure Victory");
+            RusticHour.Stop();
         }
         if (resources[1] >= 200)
         {
             //SceneManager.LoadScene("EnergyVictory");
             Debug.Log("Energy Victory");
+            RusticHour.Stop();
         }
     }
 }

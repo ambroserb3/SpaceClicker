@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    public AudioSource GlisteningReason;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class SceneManagement : MonoBehaviour
     public void LoadMainScene()
     {
         SceneManager.LoadScene("Main");
+        GlisteningReason.Play(0);
     }
 
     public void QuitApp()
