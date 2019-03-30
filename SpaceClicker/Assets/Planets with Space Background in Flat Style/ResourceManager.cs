@@ -42,6 +42,9 @@ public class ResourceManager : MonoBehaviour
         return resources;
     }
 
+    public int[] ToAdd(string buildingName, int[] buildings){
+        return Code.Resources.GetOptimizedPlanetGeneration(buildingName, buildings).GetResources();
+    }
     public void Victory()
     {
         if (resources[0] + resources[2] >= 200)
