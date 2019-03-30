@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+namespace Code.Buildings{
+    public interface Building 
     {
+        Resources Cost();
+        Resources Generation();
+        string Type();
+        // protected Resources resourceGeneration;
+        // protected i
+        // public Building(int[] resourceGeneration){
+        //     this.resourceGeneration = resourceGeneration;
+        // }
+        // public override string ToString(){
+        //     string st = "";
+        //     for(int i = 0; i < resourceGeneration.Length; i++){
+        //         st += (i + ": " + resourceGeneration[i]);
+        //     }
+        //     return "Building with resource generation of:" + st;
+        // }
         
     }
 }

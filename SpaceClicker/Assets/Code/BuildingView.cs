@@ -6,7 +6,7 @@ public class BuildingView : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject A;
-    private string[] names = new string[5] {"Mine","B","C","D","E"};
+    private string[] names = new string[5] {"Mine","Farm","Habitation","WTF","Synth"};
     private GameObject[] gameObjects = new GameObject[5];
     void Start()
     {

@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 660458093}
   - component: {fileID: 660458092}
   m_Layer: 0
-  m_Name: Water-Planet-wWih-Small-Islands
+  m_Name: Water-Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 757179432}
   - component: {fileID: 757179431}
   m_Layer: 0
-  m_Name: Dark-PLanet
+  m_Name: Dark-Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1677,7 +1677,7 @@ GameObject:
   - component: {fileID: 1441166189}
   - component: {fileID: 1441166188}
   m_Layer: 0
-  m_Name: earth
+  m_Name: Earth-Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
