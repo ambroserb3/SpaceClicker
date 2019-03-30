@@ -6,10 +6,10 @@ public class BuildingMenuImageManagerScript : MonoBehaviour
 {
     public Sprite PowerImage;
     public Sprite MineImage;
-    public Sprite BImage;
-    public Sprite CImage;
-    public Sprite EImage;
-    public Sprite FImage;
+    public Sprite FarmImage;
+    public Sprite HabitationImage;
+    public Sprite WTFImage;
+    public Sprite SynthImage;
 
     // Start is called before the first frame update
     void Start()
