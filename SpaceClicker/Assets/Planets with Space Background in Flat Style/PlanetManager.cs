@@ -48,7 +48,7 @@ public class PlanetManager : MonoBehaviour
 
         if (buildType.Equals("Mine"))
         {
-            if (Resources.compareCost("Mine"))
+            if (Code.Resources.compareCost("Mine"))
             {
                 buildings[1]++;
             }
@@ -56,7 +56,7 @@ public class PlanetManager : MonoBehaviour
 
         if (buildType.Equals("Farm"))
         {
-            if (Resources.compareCost("Farm"))
+            if (Code.Resources.compareCost("Farm"))
             {
                 buildings[2]++;
             }
@@ -64,7 +64,7 @@ public class PlanetManager : MonoBehaviour
 
         if (buildType.Equals("Habitation"))
         {
-            if (Resources.compareCost("Farm"))
+            if (Code.Resources.compareCost("Farm"))
             {
                 buildings[3]++;
             }
@@ -72,7 +72,7 @@ public class PlanetManager : MonoBehaviour
 
         if (buildType.Equals("WTF"))
         {
-            if (Resources.compareCost("Farm"))
+            if (Code.Resources.compareCost("Farm"))
             {
                 buildings[4]++;
             }
@@ -80,7 +80,7 @@ public class PlanetManager : MonoBehaviour
 
         if (buildType.Equals("Synth"))
         {
-            if (Resources.compareCost("Synth"))
+            if (Code.Resources.compareCost("Synth"))
             {
                 buildings[5]++;
             }
