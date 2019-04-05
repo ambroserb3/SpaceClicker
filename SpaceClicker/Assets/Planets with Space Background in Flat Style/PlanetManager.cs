@@ -13,8 +13,8 @@ public class PlanetManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        resources = ResourceManager.resources;
         name = gameObject.name;
-
         buildings = new int[6];
         buildings[0] = 0;
         buildings[1] = 0;
