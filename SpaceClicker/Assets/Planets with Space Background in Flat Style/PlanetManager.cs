@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlanetManager : MonoBehaviour
 {
-    private int[] resources;
+    private Code.Resources resources;
     private int[] buildings;
-    private int[] onClick;
+    private Code.Resources onClick;
     private string name;
 
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class PlanetManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        resources = ResourceManager.getResources();
+        resources = ResourceManager.resources;
         onClick = ResourceManager.ToAdd(name, buildings);
     }
 
@@ -66,14 +66,7 @@ public class PlanetManager : MonoBehaviour
     private void OnMouseDown()
     {
         print("huzzah");
-        resources[0] += onClick[0];
-        resources[1] += onClick[1];
-        resources[2] += onClick[2];
-        resources[3] += onClick[3];
-        resources[4] += onClick[4];
-        resources[5] += onClick[5];
-
+        resources.addResources(onClick);
         ResourceManager.resources = resources;
-
     }
 }
