@@ -18,21 +18,12 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
         GameObject.Find("water").GetComponent<TextMesh>().text = "Water: " + resources.GetWater();
         GameObject.Find("power").GetComponent<TextMesh>().text = "Power: " + resources.GetPower();
         GameObject.Find("food").GetComponent<TextMesh>().text = "Food: " + resources.GetFood();
         GameObject.Find("khyber").GetComponent<TextMesh>().text = "Khyber: " + resources.GetKhyber();
         GameObject.Find("titanium").GetComponent<TextMesh>().text = "Titanium: " + resources.GetTitanium();
         GameObject.Find("iridium").GetComponent<TextMesh>().text = "Iridium: " + resources.GetIridium();
-=======
-        GameObject.Find("water").GetComponent<TextMesh>().text = "Water: " + resources[0];
-        GameObject.Find("power").GetComponent<TextMesh>().text = "Power: " + resources[1];
-        GameObject.Find("food").GetComponent<TextMesh>().text = "Food: " + resources[2];
-        GameObject.Find("khyber").GetComponent<TextMesh>().text = "Khyber: " + resources[3];
-        GameObject.Find("titanium").GetComponent<TextMesh>().text = "Titanium: " + resources[4];
-        GameObject.Find("iridium").GetComponent<TextMesh>().text = " " + resources[5];
->>>>>>> fe6dd33d526fa2c9fc64ce9aec4bd23df130f331
         Victory();
 
     }
@@ -43,8 +34,8 @@ public class ResourceManager : MonoBehaviour
 
     
 
-    public static Code.Resources ToAdd(string buildingName, int[] buildings){
-        return Code.Resources.GetOptimizedPlanetGeneration(buildingName, buildings);
+    public static Code.Resources ToAdd(string planetName, int[] buildings){
+        return Code.Resources.GetOptimizedPlanetGeneration(planetName, buildings);
     }
     public void Victory()
     {
