@@ -2,35 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//commented to fix
 public class ResourceManager : MonoBehaviour
 {
-    public static int[] resources;
+    public static Code.Resources resources;
     public int Khyber;
     public AudioSource RusticHour;
 
     // Start is called before the first frame update
     void Start()
     {
-        resources = new int[6];
-        resources[0] = 0;
-        resources[1] = 0;
-        resources[2] = 0;
-        resources[3] = 0;
-        resources[4] = 0;
-        resources[5] = 0;
-        RusticHour.Play(0);
+        resources = new Code.Resources();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject.Find("water").GetComponent<TextMesh>().text = " " + resources[0];
-        GameObject.Find("power").GetComponent<TextMesh>().text = " " + resources[1];
-        GameObject.Find("food").GetComponent<TextMesh>().text = " " + resources[2];
-        GameObject.Find("khyber").GetComponent<TextMesh>().text = " " + resources[3];
-        GameObject.Find("titanium").GetComponent<TextMesh>().text = " " + resources[4];
-        GameObject.Find("iridium").GetComponent<TextMesh>().text = " " + resources[5];
+        GameObject.Find("water").GetComponent<TextMesh>().text = " " + resources.GetWater();
+        GameObject.Find("power").GetComponent<TextMesh>().text = " " + resources.GetPower();
+        GameObject.Find("food").GetComponent<TextMesh>().text = " " + resources.GetFood();
+        GameObject.Find("khyber").GetComponent<TextMesh>().text = " " + resources.GetKhyber();
+        GameObject.Find("titanium").GetComponent<TextMesh>().text = " " + resources.GetTitanium();
+        GameObject.Find("iridium").GetComponent<TextMesh>().text = " " + resources.GetIridium();
         Victory();
 
     }
@@ -39,29 +32,26 @@ public class ResourceManager : MonoBehaviour
     //2. Metals reach a certain amount = Structure victory
     //3. When energy reaches a certain amount = Energy Victory
 
-    public static int[] getResources()
-    {
-        return resources;
-    }
+    
 
-    public int[] ToAdd(string buildingName, int[] buildings){
-        return Code.Resources.GetOptimizedPlanetGeneration(buildingName, buildings).GetResources();
+    public static Code.Resources ToAdd(string planetName, int[] buildings){
+        return Code.Resources.GetOptimizedPlanetGeneration(planetName, buildings);
     }
     public void Victory()
     {
-        if (resources[0] + resources[2] >= 200)
+        if (resources.GetWater() + resources.GetFood() >= 200)
         {
             //SceneManager.LoadScene("PopVictory");
             Debug.Log("Population Victory");
             RusticHour.Stop();
         }
-        if (resources[3] + resources[4] + resources[5] >= 200)
+        if (resources.GetKhyber() + resources.GetIridium() + resources.GetTitanium() >= 200)
         {
             //SceneManager.LoadScene("StructureVictory");
             Debug.Log("Structure Victory");
             RusticHour.Stop();
         }
-        if (resources[1] >= 200)
+        if (resources.GetPower() >= 200)
         {
             //SceneManager.LoadScene("EnergyVictory");
             Debug.Log("Energy Victory");
