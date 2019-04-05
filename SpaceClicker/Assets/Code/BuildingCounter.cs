@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BuildingCounter : MonoBehaviour{
 
     public Text buildingCount;
-    public int buildings;
+    public int buildings=0;
     void Start(){
         buildingCount.text = "";
         buildings = 0;
