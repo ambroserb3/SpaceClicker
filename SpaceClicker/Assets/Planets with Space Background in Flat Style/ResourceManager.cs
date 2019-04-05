@@ -18,12 +18,12 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject.Find("water").GetComponent<TextMesh>().text = "Water: " + resources.GetWater();
-        GameObject.Find("power").GetComponent<TextMesh>().text = "Power: " + resources.GetPower();
-        GameObject.Find("food").GetComponent<TextMesh>().text = "Food: " + resources.GetFood();
-        GameObject.Find("khyber").GetComponent<TextMesh>().text = "Khyber: " + resources.GetKhyber();
-        GameObject.Find("titanium").GetComponent<TextMesh>().text = "Titanium: " + resources.GetTitanium();
-        GameObject.Find("iridium").GetComponent<TextMesh>().text = "Iridium: " + resources.GetIridium();
+        GameObject.Find("water").GetComponent<TextMesh>().text = " " + resources.GetWater();
+        GameObject.Find("power").GetComponent<TextMesh>().text = " " + resources.GetPower();
+        GameObject.Find("food").GetComponent<TextMesh>().text = " " + resources.GetFood();
+        GameObject.Find("khyber").GetComponent<TextMesh>().text = " " + resources.GetKhyber();
+        GameObject.Find("titanium").GetComponent<TextMesh>().text = " " + resources.GetTitanium();
+        GameObject.Find("iridium").GetComponent<TextMesh>().text = " " + resources.GetIridium();
         Victory();
 
     }
