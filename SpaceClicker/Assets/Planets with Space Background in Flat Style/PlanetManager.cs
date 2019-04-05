@@ -41,7 +41,7 @@ public class PlanetManager : MonoBehaviour
             if (resources.compareCost("Power"))
             {
                 buildings[0]++;
-
+                resources.removeCost("Power");
             }
 
         }
@@ -51,6 +51,7 @@ public class PlanetManager : MonoBehaviour
             if (resources.compareCost("Mine"))
             {
                 buildings[1]++;
+                resources.removeCost("Mine");
             }
         }
 
@@ -59,22 +60,25 @@ public class PlanetManager : MonoBehaviour
             if (resources.compareCost("Farm"))
             {
                 buildings[2]++;
+                resources.removeCost("Farm");
             }
         }
 
         if (buildType.Equals("Habitation"))
         {
-            if (resources.compareCost("Farm"))
+            if (resources.compareCost("Habitation"))
             {
                 buildings[3]++;
+                resources.removeCost("Habitation");
             }
         }
 
         if (buildType.Equals("WTF"))
         {
-            if (resources.compareCost("Farm"))
+            if (resources.compareCost("WTF"))
             {
                 buildings[4]++;
+                resources.removeCost("WTF");
             }
         }
 
@@ -83,6 +87,7 @@ public class PlanetManager : MonoBehaviour
             if (resources.compareCost("Synth"))
             {
                 buildings[5]++;
+                resources.removeCost("Synth");
             }
         }
     }
