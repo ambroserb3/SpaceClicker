@@ -8,6 +8,7 @@ public class PlanetManager : MonoBehaviour
     private int[] buildings;
     private int[] onClick;
     private string name;
+    public AudioSource BuildingNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class PlanetManager : MonoBehaviour
 
     public void build(string buildType)
     {
+        BuildingNoise.Play(0);
         if (buildType.Equals("Power"))
         {
             buildings[0]++;
@@ -66,6 +68,7 @@ public class PlanetManager : MonoBehaviour
     private void OnMouseDown()
     {
         print("huzzah");
+
         resources[0] += onClick[0];
         resources[1] += onClick[1];
         resources[2] += onClick[2];
