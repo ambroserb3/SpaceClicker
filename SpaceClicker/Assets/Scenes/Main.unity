@@ -142,7 +142,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2080491423}
+  - {fileID: 1841415137}
   m_Father: {fileID: 1877826828}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 162ae060aa9fcb94c88baa912594e71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: {fileID: 3228919974057304134, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
+  A: {fileID: 9062693450104168957, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
 --- !u!1 &96509301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,12 +1696,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10653551510376142a5dbb4054619f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerImage: {fileID: 0}
-  MineImage: {fileID: 0}
-  FarmImage: {fileID: 0}
-  HabitationImage: {fileID: 0}
-  WTFImage: {fileID: 0}
-  SynthImage: {fileID: 0}
+  PowerImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  MineImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
+  FarmImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
+  HabitationImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
+  WTFImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
+  SynthImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
 --- !u!4 &1326444790
 Transform:
   m_ObjectHideFlags: 0
@@ -2263,6 +2263,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774514718}
   m_CullTransparentMesh: 0
+--- !u!224 &1841415137 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9062693450822676744, guid: 932ab74d0f4bff844a78addc621fc4b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 717008202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1862167374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,14 +2671,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &2080491423 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3228919974057304135, guid: 932ab74d0f4bff844a78addc621fc4b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 717008202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2109412346
 GameObject:
   m_ObjectHideFlags: 0
