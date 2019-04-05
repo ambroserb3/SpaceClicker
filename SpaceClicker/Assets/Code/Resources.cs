@@ -71,6 +71,15 @@ namespace Code{
             return planetResources.addResources(optimizedBuildingResources);
         }
 
+        public static bool compareCost(string buildName)
+        {
+            return true;
+        }
+
+        public static int[] getCost(string buildName)
+        {
+
+        ]
 
         public int[] GetResources(){
             return resources;

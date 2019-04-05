@@ -38,32 +38,52 @@ public class PlanetManager : MonoBehaviour
         BuildingNoise.Play(0);
         if (buildType.Equals("Power"))
         {
-            buildings[0]++;
+            if (Resources.compareCost("Power"))
+            {
+                buildings[0]++;
+
+            }
+
         }
 
         if (buildType.Equals("Mine"))
         {
-            buildings[1]++;
+            if (Resources.compareCost("Mine"))
+            {
+                buildings[1]++;
+            }
         }
 
         if (buildType.Equals("Farm"))
         {
-            buildings[2]++;
+            if (Resources.compareCost("Farm"))
+            {
+                buildings[2]++;
+            }
         }
 
         if (buildType.Equals("Habitation"))
         {
-            buildings[3]++;
+            if (Resources.compareCost("Farm"))
+            {
+                buildings[3]++;
+            }
         }
 
         if (buildType.Equals("WTF"))
         {
-            buildings[4]++;
+            if (Resources.compareCost("Farm"))
+            {
+                buildings[4]++;
+            }
         }
 
         if (buildType.Equals("Synth"))
         {
-            buildings[5]++;
+            if (Resources.compareCost("Synth"))
+            {
+                buildings[5]++;
+            }
         }
     }
 
