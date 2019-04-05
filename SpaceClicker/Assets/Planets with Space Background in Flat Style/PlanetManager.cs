@@ -15,6 +15,7 @@ public class PlanetManager : MonoBehaviour
     {
         resources = ResourceManager.resources;
         name = gameObject.name;
+        
         buildings = new int[6];
         buildings[0] = 0;
         buildings[1] = 0;
@@ -29,6 +30,7 @@ public class PlanetManager : MonoBehaviour
     {
         resources = ResourceManager.resources;
         perClick = ResourceManager.ToAdd(name, buildings);
+        
     }
 
     public void build(string buildType)
@@ -44,22 +46,22 @@ public class PlanetManager : MonoBehaviour
             buildings[1]++;
         }
 
-        if (buildType.Equals("B"))
+        if (buildType.Equals("Farm"))
         {
             buildings[2]++;
         }
 
-        if (buildType.Equals("C"))
+        if (buildType.Equals("Habitation"))
         {
             buildings[3]++;
         }
 
-        if (buildType.Equals("D"))
+        if (buildType.Equals("WTF"))
         {
             buildings[4]++;
         }
 
-        if (buildType.Equals("E"))
+        if (buildType.Equals("Synth"))
         {
             buildings[5]++;
         }
