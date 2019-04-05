@@ -30,7 +30,7 @@ public class ResourceManager : MonoBehaviour
         GameObject.Find("food").GetComponent<TextMesh>().text = "Food: " + resources[2];
         GameObject.Find("khyber").GetComponent<TextMesh>().text = "Khyber: " + resources[3];
         GameObject.Find("titanium").GetComponent<TextMesh>().text = "Titanium: " + resources[4];
-        GameObject.Find("iridium").GetComponent<TextMesh>().text = "Iridium: " + resources[5];
+        GameObject.Find("iridium").GetComponent<TextMesh>().text = " " + resources[5];
         Victory();
 
     }
