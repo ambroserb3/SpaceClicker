@@ -29,10 +29,9 @@ public class ResourceManager : MonoBehaviour
     }
 
     //1. Food and Water reach a certain amount = Population Victory
-    //2. Metals reach a certain amount = Structure victory
-    //3. When energy reaches a certain amount = Energy Victory
+    //2. Metals reach a certain amount = Materials victory
+    //3. When energy reaches a certain amount = Power Victory
 
-    
 
     public static Code.Resources ToAdd(string planetName, int[] buildings){
         return Code.Resources.GetOptimizedPlanetGeneration(planetName, buildings);
@@ -41,19 +40,19 @@ public class ResourceManager : MonoBehaviour
     {
         if (resources.GetWater() + resources.GetFood() >= 200)
         {
-            //SceneManager.LoadScene("PopVictory");
+            SceneManager.LoadScene("PopulationVictory");
             Debug.Log("Population Victory");
             RusticHour.Stop();
         }
         if (resources.GetKhyber() + resources.GetIridium() + resources.GetTitanium() >= 200)
         {
-            //SceneManager.LoadScene("StructureVictory");
+            SceneManager.LoadScene("MaterialsVictory");
             Debug.Log("Structure Victory");
             RusticHour.Stop();
         }
         if (resources.GetPower() >= 200)
         {
-            //SceneManager.LoadScene("EnergyVictory");
+            SceneManager.LoadScene("PowerVictory");
             Debug.Log("Energy Victory");
             RusticHour.Stop();
         }
