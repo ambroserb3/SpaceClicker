@@ -69,7 +69,6 @@ public class PlanetManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        print("huzzah");
         resources.addResources(perClick);
         ResourceManager.resources = resources;
     }
