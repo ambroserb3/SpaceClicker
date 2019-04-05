@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuiltBuildingScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BuiltBuildingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("Scroll View").GetComponent<ScrollRect>().vertical = false;
         gameObject.transform.position = Camera.main.ScreenToWorldPoint( new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0))+ new Vector3(0,0,5); 
     }
     public void SetType(string type)
@@ -28,7 +30,9 @@ public class BuiltBuildingScript : MonoBehaviour
             print(buildingtype);
             if (planetcolliding != "No-Planet"){
                 GameObject.Find(planetcolliding).GetComponent<PlanetManager>().build(buildingtype);
+                GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
+            GameObject.Find("Scroll View").GetComponent<ScrollRect>().vertical = true;
             Destroy(gameObject);
         }
     }

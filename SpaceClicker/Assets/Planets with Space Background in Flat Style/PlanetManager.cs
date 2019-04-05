@@ -38,7 +38,7 @@ public class PlanetManager : MonoBehaviour
         BuildingNoise.Play(0);
         if (buildType.Equals("Power"))
         {
-            if (Resources.compareCost("Power"))
+            if (resources.compareCost("Power"))
             {
                 buildings[0]++;
 
