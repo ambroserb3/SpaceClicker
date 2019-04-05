@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//commented to fix
 public class ResourceManager : MonoBehaviour
 {
     public static Code.Resources resources;
