@@ -15,7 +15,7 @@ namespace Code{
         public static int NUM_OF_RESOURCES = 6;
         
     
-        private static int[] resources;
+        private int[] resources;
 
         public Resources(){
             resources = new int[NUM_OF_RESOURCES];
@@ -84,7 +84,7 @@ namespace Code{
             return toRet;
         }
 
-        public static int[] getCost(string buildName)
+        public int[] getCost(string buildName)
         {
             int[] toRet = new int[6];
             if (buildName == "Power")
