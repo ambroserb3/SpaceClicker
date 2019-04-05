@@ -40,11 +40,9 @@ namespace Code{
         public static Resources DarkResourceGeneration(){
             return new Resources(new int[] {10,10,10,5,5,0});
         }
-        //INPUT: NAME AND INT ARRAY
-        //OUTPUT: 
         public static Resources BuildingResourceOptimizer(string planetName, int[] buildings){
-            if(buildings.Length != BuildingView.BUILDING_NAMES.Length)
-                return null;
+            //if(buildings.Length != BuildingView.BUILDING_NAMES.Length)
+                //return null;
             if(planetName == "Earth-Planet")
                 return new Resources(new int[]{buildings[0] * 5, buildings[1] * 4, buildings[2] * 4, buildings[3] * 3, buildings[4] * 3, buildings[5] * 4});
             if(planetName == "Water-Planet")

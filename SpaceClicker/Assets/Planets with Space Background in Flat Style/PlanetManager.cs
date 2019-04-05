@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class PlanetManager : MonoBehaviour
 {
-    private int[] resources;
+    private Code.Resources resources;
     private int[] buildings;
-    private int[] onClick;
+    private Code.Resources perClick;
     private string name;
     public AudioSource BuildingNoise;
 
     // Start is called before the first frame update
     void Start()
     {
+        resources = ResourceManager.resources;
         name = gameObject.name;
-
+        
         buildings = new int[6];
         buildings[0] = 0;
         buildings[1] = 0;
@@ -27,8 +28,9 @@ public class PlanetManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        resources = ResourceManager.getResources();
-        //onClick = ResourceManager.ToAdd(name, buildings);
+        resources = ResourceManager.resources;
+        perClick = ResourceManager.ToAdd(name, buildings);
+        
     }
 
     public void build(string buildType)
@@ -44,22 +46,22 @@ public class PlanetManager : MonoBehaviour
             buildings[1]++;
         }
 
-        if (buildType.Equals("B"))
+        if (buildType.Equals("Farm"))
         {
             buildings[2]++;
         }
 
-        if (buildType.Equals("C"))
+        if (buildType.Equals("Habitation"))
         {
             buildings[3]++;
         }
 
-        if (buildType.Equals("D"))
+        if (buildType.Equals("WTF"))
         {
             buildings[4]++;
         }
 
-        if (buildType.Equals("E"))
+        if (buildType.Equals("Synth"))
         {
             buildings[5]++;
         }
@@ -68,15 +70,7 @@ public class PlanetManager : MonoBehaviour
     private void OnMouseDown()
     {
         print("huzzah");
-
-        resources[0] += onClick[0];
-        resources[1] += onClick[1];
-        resources[2] += onClick[2];
-        resources[3] += onClick[3];
-        resources[4] += onClick[4];
-        resources[5] += onClick[5];
-
+        resources.addResources(perClick);
         ResourceManager.resources = resources;
-
     }
 }
