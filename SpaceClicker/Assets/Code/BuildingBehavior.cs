@@ -25,7 +25,7 @@ public class BuildingBehavior : MonoBehaviour
         
     }
     public void SetImage(string name){
-        gameObject.GetComponent<Image>().sprite = GameObject.Find("BuildingMenuImageManager").GetComponent<BuildingMenuImageManagerScript>().getSprite(name);
+        gameObject.GetComponent<SpriteRenderer>().sprite = GameObject.Find("BuildingMenuImageManager").GetComponent<BuildingMenuImageManagerScript>().getSprite(name);
     }
     void OnMouseDown()
     {

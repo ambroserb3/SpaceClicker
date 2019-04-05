@@ -23,7 +23,7 @@ public class BuildingMenuImageManagerScript : MonoBehaviour
         if (name == "Mine"){
             return MineImage;
         }
-        return BImage;
+        return FarmImage;
     } 
 
     // Update is called once per frame

@@ -8,6 +8,7 @@ public class PlanetManager : MonoBehaviour
     private int[] buildings;
     private Code.Resources onClick;
     private string name;
+    public AudioSource BuildingNoise;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +27,18 @@ public class PlanetManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         resources = ResourceManager.resources;
         onClick = ResourceManager.ToAdd(name, buildings);
+=======
+        resources = ResourceManager.getResources();
+        //onClick = ResourceManager.ToAdd(name, buildings);
+>>>>>>> 2de0e0088c0ff71907a063fff20ade5fe8e24af2
     }
 
     public void build(string buildType)
     {
+        BuildingNoise.Play(0);
         if (buildType.Equals("Power"))
         {
             buildings[0]++;
@@ -66,7 +73,18 @@ public class PlanetManager : MonoBehaviour
     private void OnMouseDown()
     {
         print("huzzah");
+<<<<<<< HEAD
         resources.addResources(onClick);
+=======
+
+        resources[0] += onClick[0];
+        resources[1] += onClick[1];
+        resources[2] += onClick[2];
+        resources[3] += onClick[3];
+        resources[4] += onClick[4];
+        resources[5] += onClick[5];
+
+>>>>>>> 2de0e0088c0ff71907a063fff20ade5fe8e24af2
         ResourceManager.resources = resources;
     }
 }
