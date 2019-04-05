@@ -84,6 +84,15 @@ namespace Code{
             return toRet;
         }
 
+        public void removeCost(string buildName)
+        {
+            int[] toRemove = getCost(buildName);
+            for (int i = 0; i < toRemove.Length; i++)
+            {
+                resources[i] -= toRemove[i];
+            }
+        }
+
         public int[] getCost(string buildName)
         {
             int[] toRet = new int[6];
