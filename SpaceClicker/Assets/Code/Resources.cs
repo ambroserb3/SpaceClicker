@@ -78,7 +78,7 @@ namespace Code{
 
         public static int[] getCost(string buildName)
         {
-
+            return null;
         }
 
         public int[] GetResources(){
