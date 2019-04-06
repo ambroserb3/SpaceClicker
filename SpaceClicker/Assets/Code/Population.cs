@@ -1,47 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Population : MonoBehaviour{
     public int population;
+    public Text pops;
     public int food;
     public int water;
     public float time;
+    [SerializeField]
     private float subtime;
-    private int[] Increase;
+    private int Increase;
     private int i=0;
-    private float ctime;
+
+
     void Start(){
-        Increase = new int[6] {30,60,120,240,560,560};
+        Increase = 20;
         subtime = 10;
-        ctime=120;
     }
     void Update(){
+        
         food = ResourceManager.resources.GetResources()[1];
         water = ResourceManager.resources.GetResources()[0];
         time = GameObject.Find("Timer").GetComponent<Timer>().time;
-        subtime=10-(ctime-time);
-        print(subtime);
-        if(subtime <= 0){
+        subtime -= Time.deltaTime;    
+        if (subtime <= 0){
             resetsubtime();
-            if (food+water >= inc(i)){
+            if (food+water >= Increase){
                 population+= 10;
+                Increase += 30;
             }
         }
+        
 
     }
     public void resetsubtime(){
-        ctime=time;
         subtime =10;
         i++;
-
-    }
-    public int inc(int i){
-        try{
-            return Increase[i];
-        }
-        catch{
-            return 560;
-        }
     }
 }

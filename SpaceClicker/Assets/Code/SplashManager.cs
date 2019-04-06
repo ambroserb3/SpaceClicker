@@ -59,6 +59,7 @@ public class SplashManager : MonoBehaviour
 
         if (scene.buildIndex == 1)
         {
+            SplashManage = GameObject.Find("SplashManager");
             //Keep the current index of the Dropdown in a variable
             DropdownValue = Dropdown.value;
             //Change the message to say the name of the current Dropdown selection using the value

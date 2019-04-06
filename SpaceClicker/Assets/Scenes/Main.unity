@@ -201,6 +201,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   A: {fileID: 9062693450104168957, guid: 932ab74d0f4bff844a78addc621fc4b3, type: 3}
+--- !u!1 &90001150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 90001151}
+  - component: {fileID: 90001153}
+  - component: {fileID: 90001152}
+  m_Layer: 5
+  m_Name: TimeText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &90001151
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90001150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2116534639}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 320, y: 662}
+  m_SizeDelta: {x: 101.3, y: 42.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &90001152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90001150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 25f4bc97a8e98ad43866b0984ee94fef, type: 3}
+    m_FontSize: 38
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Time:'
+--- !u!222 &90001153
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90001150}
+  m_CullTransparentMesh: 0
 --- !u!1 &96509301
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72676e62e0283ce4d89110d3b3086f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingCount: {fileID: 0}
+  buildingCount: {fileID: 549544372}
   buildings: 0
 --- !u!4 &218551890
 Transform:
@@ -1706,6 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   population: 0
+  pops: {fileID: 0}
   food: 0
   water: 0
   time: 0
@@ -2034,6 +2114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+  Clock: {fileID: 0}
 --- !u!4 &1368254050
 Transform:
   m_ObjectHideFlags: 0
@@ -3449,6 +3530,7 @@ RectTransform:
   - {fileID: 1862167375}
   - {fileID: 1659000611}
   - {fileID: 549544371}
+  - {fileID: 90001151}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
