@@ -9,6 +9,7 @@ public class ResourceManager : MonoBehaviour
     public int Khyber;
     public AudioSource RusticHour;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,6 @@ public class ResourceManager : MonoBehaviour
         GameObject.Find("titanium").GetComponent<TextMesh>().text = " " + resources.GetTitanium();
         GameObject.Find("iridium").GetComponent<TextMesh>().text = " " + resources.GetIridium();
         Victory();
-
     }
 
     //1. Food and Water reach a certain amount = Population Victory
@@ -38,13 +38,13 @@ public class ResourceManager : MonoBehaviour
     }
     public void Victory()
     {
-        if (resources.GetWater() + resources.GetFood() >= 200)
+        if(GameObject.Find("Population").GetComponent<Population>().population >= 99)
         {
             SceneManager.LoadScene("PopulationVictory");
             Debug.Log("Population Victory");
             RusticHour.Stop();
         }
-        if (resources.GetKhyber() + resources.GetIridium() + resources.GetTitanium() >= 200)
+        if (resources.GetKhyber() + resources.GetIridium() + resources.GetTitanium() >= 999)
         {
             SceneManager.LoadScene("MaterialsVictory");
             Debug.Log("Structure Victory");

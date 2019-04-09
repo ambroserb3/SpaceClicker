@@ -71,13 +71,97 @@ namespace Code{
             return planetResources.addResources(optimizedBuildingResources);
         }
 
-        public static bool compareCost(string buildName)
+        public bool compareCost(string buildName)
         {
-            return true;
+            int[] toCheck = getCost(buildName);
+            bool toRet = true;
+            for (int i = 0; i < resources.Length ; i++)
+            {
+                if (resources[i] < toCheck[i])
+                    toRet = false;
+            }
+
+            return toRet;
         }
 
-        public static int[] getCost(string buildName)
+        public void removeCost(string buildName)
         {
+            int[] toRemove = getCost(buildName);
+            for (int i = 0; i < toRemove.Length; i++)
+            {
+                resources[i] -= toRemove[i];
+            }
+        }
+
+        public int[] getCost(string buildName)
+        {
+            int[] toRet = new int[6];
+            if (buildName == "Power")
+            {
+                toRet[0] = 5;
+                toRet[1] = 5;
+                toRet[2] = 5;
+                toRet[3] = 5;
+                toRet[4] = 5;
+                toRet[5] = 5;
+
+                return toRet;
+            }
+            if (buildName == "Mine")
+            {
+                toRet[0] = 5;
+                toRet[1] = 5;
+                toRet[2] = 5;
+                toRet[3] = 5;
+                toRet[4] = 5;
+                toRet[5] = 5;
+
+                return toRet;
+            }
+            if (buildName == "Farm")
+            {
+                toRet[0] = 5;
+                toRet[1] = 5;
+                toRet[2] = 5;
+                toRet[3] = 5;
+                toRet[4] = 5;
+                toRet[5] = 5;
+
+                return toRet;
+            }
+            if (buildName == "Habitation")
+            {
+                toRet[0] = 5;
+                toRet[1] = 5;
+                toRet[2] = 5;
+                toRet[3] = 5;
+                toRet[4] = 5;
+                toRet[5] = 5;
+
+                return toRet;
+            }
+            if (buildName == "WTF")
+            {
+                toRet[0] = 5;
+                toRet[1] = 5;
+                toRet[2] = 5;
+                toRet[3] = 5;
+                toRet[4] = 5;
+                toRet[5] = 5;
+
+                return toRet;
+            }
+            if (buildName == "Synth")
+            {
+                toRet[0] = 1;
+                toRet[1] = 1;
+                toRet[2] = 1;
+                toRet[3] = 1;
+                toRet[4] = 1;
+                toRet[5] = 1;
+
+                return toRet;
+            }
             return null;
         }
 
