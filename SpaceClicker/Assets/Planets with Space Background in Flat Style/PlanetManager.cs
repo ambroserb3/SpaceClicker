@@ -33,7 +33,7 @@ public class PlanetManager : MonoBehaviour
         
     }
 
-    public void build(string buildType)
+    public bool build(string buildType)
     {
         BuildingNoise.Play(0);
         if (buildType.Equals("Power"))
@@ -42,6 +42,7 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[0]++;
                 resources.removeCost("Power");
+                return true;
             }
 
         }
@@ -52,6 +53,7 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[1]++;
                 resources.removeCost("Mine");
+                return true;
             }
         }
 
@@ -61,6 +63,7 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[2]++;
                 resources.removeCost("Farm");
+                return true;
             }
         }
 
@@ -70,6 +73,7 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[3]++;
                 resources.removeCost("Habitation");
+                return true;
             }
         }
 
@@ -79,6 +83,7 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[4]++;
                 resources.removeCost("WTF");
+                return true;
             }
         }
 
@@ -88,8 +93,11 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[5]++;
                 resources.removeCost("Synth");
+                return true;
             }
         }
+
+        return false;
     }
 
     private void OnMouseDown()
