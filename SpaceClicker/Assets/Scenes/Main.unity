@@ -1701,12 +1701,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10653551510376142a5dbb4054619f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
-  MineImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
-  FarmImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  PowerImage: {fileID: 21300000, guid: 387de50cc0b3344428aa325ffa5fe752, type: 3}
+  MineImage: {fileID: 21300000, guid: d6700dc2d897d6f4393fa47fd9c84936, type: 3}
+  FarmImage: {fileID: 21300000, guid: 436c0b4104f179f45bb93bc16c378e21, type: 3}
   HabitationImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
   WTFImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
-  SynthImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  SynthImage: {fileID: 21300000, guid: b83bd1dae8273fd4baa707b4a9ee30a1, type: 3}
 --- !u!4 &953140523
 Transform:
   m_ObjectHideFlags: 0

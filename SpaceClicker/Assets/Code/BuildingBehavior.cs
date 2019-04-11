@@ -20,6 +20,7 @@ public class BuildingBehavior : MonoBehaviour
     }
     public void SetName(string name)
     {
+        
         buildingname = name;
         SetImage(buildingname);
         
@@ -30,7 +31,7 @@ public class BuildingBehavior : MonoBehaviour
     void OnMouseDown()
     {
         builtBuilding = Instantiate(built, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-        builtBuilding.GetComponent<SpriteRenderer>().sprite = GameObject.Find("BuildingIconImageManager").GetComponent<BuildingMenuImageManagerScript>().getSprite(name);
+        builtBuilding.GetComponent<SpriteRenderer>().sprite = GameObject.Find("BuildingIconImageManager").GetComponent<BuildingMenuImageManagerScript>().getSprite(buildingname);
         builtBuilding.GetComponent<BuiltBuildingScript>().SetType(buildingname);
     }
 }
