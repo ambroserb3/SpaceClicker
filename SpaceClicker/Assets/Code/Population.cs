@@ -20,9 +20,9 @@ public class Population : MonoBehaviour{
         subtime = 10;
     }
     void Update(){
-        
-        food = ResourceManager.resources.GetResources()[1];
-        water = ResourceManager.resources.GetResources()[0];
+
+        food = ResourceManager.resources.GetFood();
+        water = ResourceManager.resources.GetWater();
         time = GameObject.Find("Timer").GetComponent<Timer>().time;
         subtime -= Time.deltaTime;    
         if (subtime <= 0){

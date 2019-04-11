@@ -29,16 +29,16 @@ namespace Code{
             }
         }
         public static Resources EarthResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,0});
+            return new Resources(new int[] {10,10,10,5,5,5});
         }
         public static Resources WaterResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,0});
+            return new Resources(new int[] {10,10,10,5,5,5});
         }
         public static Resources SandResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,0});
+            return new Resources(new int[] {10,10,10,5,5,5});
         }
         public static Resources DarkResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,0});
+            return new Resources(new int[] {10,10,10,5,5,5});
         }
         public static Resources BuildingResourceOptimizer(string planetName, int[] buildings){
             //if(buildings.Length != BuildingView.BUILDING_NAMES.Length)
