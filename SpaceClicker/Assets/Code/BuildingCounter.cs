@@ -30,7 +30,7 @@ public class BuildingCounter : MonoBehaviour{
     public void resetsubtime()
     {
         subtime = 10;
-        i++;
+        //i++;
     }
 
     public void addBuilding(){
