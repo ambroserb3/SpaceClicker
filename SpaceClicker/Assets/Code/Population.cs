@@ -20,7 +20,7 @@ public class Population : MonoBehaviour{
         Increase = 20;
         subtime = 10;
     }
-    void IncreaseHabitations(){
+    public void IncreaseHabitations(){
         habitations++;
     }
     void Update(){
@@ -28,11 +28,11 @@ public class Population : MonoBehaviour{
         food = ResourceManager.resources.GetFood();
         water = ResourceManager.resources.GetWater();
         time = GameObject.Find("Timer").GetComponent<Timer>().time;
-        subtime -= Time.deltaTime;    
+        subtime -= Time.deltaTime; 
         if (subtime <= 0){
             resetsubtime();
             if (food+water >= Increase){
-                population+= 10;
+                population+= 10+5*habitations;
                 Increase += 30;
             }
         }

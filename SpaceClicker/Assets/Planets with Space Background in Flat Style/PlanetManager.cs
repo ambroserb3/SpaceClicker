@@ -42,8 +42,9 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[0]++;
                 resources.removeCost("Power");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                
             }
 
         }
@@ -54,8 +55,9 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[1]++;
                 resources.removeCost("Mine");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -65,8 +67,9 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[2]++;
                 resources.removeCost("Farm");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+               // GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -76,9 +79,10 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[3]++;
                 resources.removeCost("Habitation");
+                GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
                 GameObject.Find("Population").GetComponent<Population>().IncreaseHabitations();
                 return true;
-                GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -88,8 +92,9 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[4]++;
                 resources.removeCost("WTF");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -99,8 +104,9 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[5]++;
                 resources.removeCost("Synth");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 

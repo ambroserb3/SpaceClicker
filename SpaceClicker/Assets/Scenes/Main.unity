@@ -472,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingCount: {fileID: 549544372}
   buildings: 0
+  subtime: 0
 --- !u!4 &218551890
 Transform:
   m_ObjectHideFlags: 0
@@ -1449,6 +1450,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 622126920528114492, guid: 932ab74d0f4bff844a78addc621fc4b3,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 282d2344223cf68478221492196e58e7,
+        type: 3}
     - target: {fileID: 9062693450822676744, guid: 932ab74d0f4bff844a78addc621fc4b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1898,6 +1905,7 @@ MonoBehaviour:
   pops: {fileID: 0}
   food: 0
   water: 0
+  habitations: 0
   time: 0
   subtime: 0
 --- !u!1 &1061844795
@@ -2173,11 +2181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10653551510376142a5dbb4054619f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
-  MineImage: {fileID: 21300000, guid: 8cbf7206260152a49baf9d047a439034, type: 3}
-  FarmImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  PowerImage: {fileID: 21300000, guid: 282d2344223cf68478221492196e58e7, type: 3}
+  MineImage: {fileID: 21300000, guid: f471ce1dfb208a844bc5d585e9f6fa68, type: 3}
+  FarmImage: {fileID: 21300000, guid: f2cb3db3f4b6422459bf3b43d09c4d88, type: 3}
   HabitationImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
-  WTFImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  WTFImage: {fileID: 21300000, guid: e585026fad7bdfa4fa06a9835aa9f7ee, type: 3}
   SynthImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
 --- !u!4 &1326444790
 Transform:
