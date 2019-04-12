@@ -76,6 +76,7 @@ public class PlanetManager : MonoBehaviour
             {
                 buildings[3]++;
                 resources.removeCost("Habitation");
+                GameObject.Find("Population").GetComponent<Population>().IncreaseHabitations();
                 return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
