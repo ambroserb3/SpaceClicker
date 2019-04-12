@@ -22,15 +22,22 @@ public class BuildingCounter : MonoBehaviour{
             resetsubtime();
             for (int i = 0; i < buildings; i++)
             {
-                ResourceManager.resources.SetPower(ResourceManager.resources.GetPower() - 5);
+                if (ResourceManager.resources.GetPower() >= 0)
+                    ResourceManager.resources.SetPower(ResourceManager.resources.GetPower() - 5);
+                else
+                    ResourceManager.resources.SetPower(0);
             }
+
+            if (ResourceManager.resources.GetPower() > 0)
+                ResourceManager.resources.SetPower(0);
+
         }
     }
 
     public void resetsubtime()
     {
         subtime = 10;
-        i++;
+        //i++;
     }
 
     public void addBuilding(){
