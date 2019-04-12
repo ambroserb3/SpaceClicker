@@ -8,6 +8,7 @@ public class Population : MonoBehaviour{
     public Text pops;
     public int food;
     public int water;
+    public int habitations;
     public float time;
     [SerializeField]
     private float subtime;
@@ -18,6 +19,9 @@ public class Population : MonoBehaviour{
     void Start(){
         Increase = 20;
         subtime = 10;
+    }
+    void IncreaseHabitations(){
+        habitations++;
     }
     void Update(){
 
