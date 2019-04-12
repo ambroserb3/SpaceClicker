@@ -30,7 +30,7 @@ public class BuiltBuildingScript : MonoBehaviour
             print(buildingtype);
             if (planetcolliding != "No-Planet"){
                 GameObject.Find(planetcolliding).GetComponent<PlanetManager>().build(buildingtype);
-                GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
             GameObject.Find("Scroll View").GetComponent<ScrollRect>().vertical = true;
             Destroy(gameObject);
