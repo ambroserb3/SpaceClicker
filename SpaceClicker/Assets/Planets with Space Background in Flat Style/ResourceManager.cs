@@ -21,7 +21,6 @@ public class ResourceManager : MonoBehaviour
     {
         GameObject.Find("water").GetComponent<TextMesh>().text = " " + resources.GetWater();
         GameObject.Find("power").GetComponent<TextMesh>().text = " " + resources.GetPower();
-        GameObject.Find("energyTotal").GetComponent<TextMesh>().text = " " + resources.GetPower();
         GameObject.Find("food").GetComponent<TextMesh>().text = " " + resources.GetFood();
         GameObject.Find("khyber").GetComponent<TextMesh>().text = " " + resources.GetKhyber();
         GameObject.Find("titanium").GetComponent<TextMesh>().text = " " + resources.GetTitanium();
