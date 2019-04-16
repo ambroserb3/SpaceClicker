@@ -1712,7 +1712,7 @@ MonoBehaviour:
   MineImage: {fileID: 21300000, guid: d6700dc2d897d6f4393fa47fd9c84936, type: 3}
   FarmImage: {fileID: 21300000, guid: 436c0b4104f179f45bb93bc16c378e21, type: 3}
   HabitationImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
-  WTFImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  WTFImage: {fileID: 21300000, guid: f9cc48a017428ca4cb0748bc9f74c584, type: 3}
   SynthImage: {fileID: 21300000, guid: b83bd1dae8273fd4baa707b4a9ee30a1, type: 3}
 --- !u!4 &953140523
 Transform:
