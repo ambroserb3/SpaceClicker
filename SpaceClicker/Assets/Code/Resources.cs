@@ -29,30 +29,29 @@ namespace Code{
             }
         }
         public static Resources EarthResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,5});
+            return new Resources(new int[] {5,5,5,5,5,5});
         }
         public static Resources WaterResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,5});
+            return new Resources(new int[] {10,10,5,0,0,0});
         }
         public static Resources SandResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,5});
+            return new Resources(new int[] {0,0,0,10,10,10});
         }
         public static Resources DarkResourceGeneration(){
-            return new Resources(new int[] {10,10,10,5,5,5});
+            return new Resources(new int[] {0,0,10,5,5,5});
         }
         public static Resources BuildingResourceOptimizer(string planetName, int[] buildings){
             //if(buildings.Length != BuildingView.BUILDING_NAMES.Length)
                 //return null;
-            if(planetName == "Earth-Planet")
-                return new Resources(new int[]{buildings[0] * 5, buildings[1] * 4, buildings[2] * 4, buildings[3] * 3, buildings[4] * 3, buildings[5] * 4});
+            if(planetName == "Earth-Planet")// WATER                                      FOOD
+                return new Resources(new int[]{Mathf.Pow(1.75, buildings[4]), Mathf.Pow(1.75, buildings[2]),Mathf.Pow(1.75, buildings[0]),Mathf.Pow(1.5, buildings[1]),Mathf.Pow(1.5, buildings[1]),Mathf.Pow(1.75, buildings[5])});
             if(planetName == "Water-Planet")
-                return  new Resources(new int[]{buildings[0] * 3, buildings[1] * 3, buildings[2] * 2, buildings[3] * 4, buildings[4] * 2, buildings[5] * 3});
+                return new Resources(new int[]{Mathf.Pow(1, buildings[0]), Mathf.Pow(1, buildings[1]),Mathf.Pow(1, buildings[2]),Mathf.Pow(1, buildings[3]),Mathf.Pow(1, buildings[4]),Mathf.Pow(1, buildings[5])});
             if(planetName == "Sand-Planet")
-                return  new Resources(new int[]{buildings[0] * 2, buildings[1] * 4, buildings[2] * 3, buildings[3] * 2, buildings[4] * 1, buildings[5] * 4});
-            if(planetName == "Dark-Planet")
-                return  new Resources(new int[]{buildings[0] * 0, buildings[1] * 2, buildings[2] * 1, buildings[3] * 1, buildings[4] * 4, buildings[5] * 2});
-            return null;
-
+                return new Resources(new int[]{Mathf.Pow(1, buildings[0]), Mathf.Pow(1, buildings[1]),Mathf.Pow(1, buildings[2]),Mathf.Pow(1, buildings[3]),Mathf.Pow(1, buildings[4]),Mathf.Pow(1, buildings[5])});
+            if(planetName == "Dark-Planet")               
+                return new Resources(new int[]{Mathf.Pow(1, buildings[0]), Mathf.Pow(1, buildings[1]),Mathf.Pow(1, buildings[2]),Mathf.Pow(1, buildings[3]),Mathf.Pow(1, buildings[4]),Mathf.Pow(1, buildings[5])});
+            return new Resources();
         }
         public static Resources GetPlanetResourceGeneration(string planetName){
             if(planetName == "Earth-Planet")
@@ -63,7 +62,7 @@ namespace Code{
                 return SandResourceGeneration();
             if(planetName == "Dark-Planet")
                 return DarkResourceGeneration();
-            return null;
+            return new Resources();
         }
         public static Resources GetOptimizedPlanetGeneration(string planetName, int[] buildings){
             Resources planetResources = GetPlanetResourceGeneration(planetName);

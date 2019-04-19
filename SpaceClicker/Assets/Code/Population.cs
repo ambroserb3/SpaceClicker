@@ -36,7 +36,7 @@ public class Population : MonoBehaviour{
                 Increase += 30;
             }
         }
-        
+        pops.text = "" + population;
 
     }
     public void resetsubtime(){

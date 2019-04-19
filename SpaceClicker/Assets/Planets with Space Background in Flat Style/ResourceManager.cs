@@ -44,13 +44,13 @@ public class ResourceManager : MonoBehaviour
             Debug.Log("Population Victory");
             RusticHour.Stop();
         }
-        if (resources.GetKhyber() + resources.GetIridium() + resources.GetTitanium() >= 999)
+        if (resources.GetKhyber() + resources.GetIridium() + resources.GetTitanium() >= 9000)
         {
             SceneManager.LoadScene("MaterialsVictory");
             Debug.Log("Structure Victory");
             RusticHour.Stop();
         }
-        if (resources.GetPower() >= 200)
+        if (resources.GetPower() >= 5000)
         {
             SceneManager.LoadScene("PowerVictory");
             Debug.Log("Energy Victory");
