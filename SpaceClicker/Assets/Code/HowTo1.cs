@@ -31,6 +31,6 @@ public class HowTo1 : MonoBehaviour
     }
     public void goHome()
     {
-        SceneManager.LoadScene("title");
+        SceneManager.LoadScene("Title");
     }
 }

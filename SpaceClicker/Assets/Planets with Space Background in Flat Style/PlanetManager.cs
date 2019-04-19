@@ -35,15 +35,17 @@ public class PlanetManager : MonoBehaviour
 
     public bool build(string buildType)
     {
-        BuildingNoise.Play(0);
+        
         if (buildType.Equals("Power"))
         {
             if (resources.compareCost("Power"))
             {
+                BuildingNoise.Play(0);
                 buildings[0]++;
                 resources.removeCost("Power");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                
             }
 
         }
@@ -52,10 +54,12 @@ public class PlanetManager : MonoBehaviour
         {
             if (resources.compareCost("Mine"))
             {
+                BuildingNoise.Play(0);
                 buildings[1]++;
                 resources.removeCost("Mine");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -63,10 +67,12 @@ public class PlanetManager : MonoBehaviour
         {
             if (resources.compareCost("Farm"))
             {
+                BuildingNoise.Play(0);
                 buildings[2]++;
                 resources.removeCost("Farm");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+               // GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -74,10 +80,13 @@ public class PlanetManager : MonoBehaviour
         {
             if (resources.compareCost("Habitation"))
             {
+                BuildingNoise.Play(0);
                 buildings[3]++;
                 resources.removeCost("Habitation");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                GameObject.Find("Population").GetComponent<Population>().IncreaseHabitations();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -85,10 +94,12 @@ public class PlanetManager : MonoBehaviour
         {
             if (resources.compareCost("WTF"))
             {
+                BuildingNoise.Play(0);
                 buildings[4]++;
                 resources.removeCost("WTF");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
@@ -96,10 +107,12 @@ public class PlanetManager : MonoBehaviour
         {
             if (resources.compareCost("Synth"))
             {
+                BuildingNoise.Play(0);
                 buildings[5]++;
                 resources.removeCost("Synth");
-                return true;
                 GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
+                return true;
+                //GameObject.Find("Building counter").GetComponent<BuildingCounter>().addBuilding();
             }
         }
 
