@@ -314,8 +314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 320, y: 662}
-  m_SizeDelta: {x: 101.3, y: 42.4}
+  m_AnchoredPosition: {x: 325.1, y: 649.4}
+  m_SizeDelta: {x: 101.3, y: 47.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90001152
 MonoBehaviour:
@@ -1869,9 +1869,9 @@ MonoBehaviour:
   PowerImage: {fileID: 21300000, guid: 387de50cc0b3344428aa325ffa5fe752, type: 3}
   MineImage: {fileID: 21300000, guid: d6700dc2d897d6f4393fa47fd9c84936, type: 3}
   FarmImage: {fileID: 21300000, guid: 436c0b4104f179f45bb93bc16c378e21, type: 3}
-  HabitationImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  HabitationImage: {fileID: 21300000, guid: 2d16f7a66d310294fb8caee92c46c04b, type: 3}
   WTFImage: {fileID: 21300000, guid: f9cc48a017428ca4cb0748bc9f74c584, type: 3}
-  SynthImage: {fileID: 21300000, guid: b83bd1dae8273fd4baa707b4a9ee30a1, type: 3}
+  SynthImage: {fileID: 21300000, guid: a5472335bf992c446ac9817ec2498c5d, type: 3}
 --- !u!4 &953140523
 Transform:
   m_ObjectHideFlags: 0
@@ -2342,9 +2342,9 @@ MonoBehaviour:
   PowerImage: {fileID: 21300000, guid: 282d2344223cf68478221492196e58e7, type: 3}
   MineImage: {fileID: 21300000, guid: f471ce1dfb208a844bc5d585e9f6fa68, type: 3}
   FarmImage: {fileID: 21300000, guid: f2cb3db3f4b6422459bf3b43d09c4d88, type: 3}
-  HabitationImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  HabitationImage: {fileID: 21300000, guid: f2cb3db3f4b6422459bf3b43d09c4d88, type: 3}
   WTFImage: {fileID: 21300000, guid: e585026fad7bdfa4fa06a9835aa9f7ee, type: 3}
-  SynthImage: {fileID: 21300000, guid: e121fbf56b5c20d458775f52b41e8e55, type: 3}
+  SynthImage: {fileID: 21300000, guid: 826872cf83d044e47859773af3af2345, type: 3}
 --- !u!4 &1326444790
 Transform:
   m_ObjectHideFlags: 0
