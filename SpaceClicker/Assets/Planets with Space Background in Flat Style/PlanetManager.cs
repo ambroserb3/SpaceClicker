@@ -9,6 +9,8 @@ public class PlanetManager : MonoBehaviour
     private Code.Resources perClick;
     private string name;
     public AudioSource BuildingNoise;
+    public AudioSource ResourceNoise;
+
 
     // Start is called before the first frame update
     void Start()
@@ -123,5 +125,6 @@ public class PlanetManager : MonoBehaviour
     {
         resources.addResources(perClick);
         ResourceManager.resources = resources;
+        ResourceNoise.Play(0);
     }
 }
