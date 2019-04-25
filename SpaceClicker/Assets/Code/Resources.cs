@@ -44,13 +44,13 @@ namespace Code{
             //if(buildings.Length != BuildingView.BUILDING_NAMES.Length)
                 //return null;
             if(planetName == "Earth-Planet")// WATER                                      FOOD
-                return new Resources(new int[]{Mathf.Pow(1.75, buildings[4]), Mathf.Pow(1.75, buildings[2]),Mathf.Pow(1.75, buildings[0]),Mathf.Pow(1.5, buildings[1]),Mathf.Pow(1.5, buildings[1]),Mathf.Pow(1.75, buildings[5])});
+                return new Resources(new int[]{(int)Mathf.Pow((float)1.5, buildings[4]), (int)Mathf.Pow((float)1.5, buildings[2]), (int)Mathf.Pow((float)2, buildings[0]),(int)Mathf.Pow((float)1.5, buildings[1]),(int)Mathf.Pow((float)1.5, buildings[1]),(int)Mathf.Pow((float)1.5, buildings[5])});
             if(planetName == "Water-Planet")
-                return new Resources(new int[]{Mathf.Pow(1, buildings[0]), Mathf.Pow(1, buildings[1]),Mathf.Pow(1, buildings[2]),Mathf.Pow(1, buildings[3]),Mathf.Pow(1, buildings[4]),Mathf.Pow(1, buildings[5])});
+                return new Resources(new int[]{(int)Mathf.Pow((float)2, buildings[4]), (int)Mathf.Pow((float)0, buildings[2]), (int)Mathf.Pow((float)0, buildings[0]),(int)Mathf.Pow((float)0, buildings[1]),(int)Mathf.Pow((float)0, buildings[1]),(int)Mathf.Pow((float)0, buildings[5])});
             if(planetName == "Sand-Planet")
-                return new Resources(new int[]{Mathf.Pow(1, buildings[0]), Mathf.Pow(1, buildings[1]),Mathf.Pow(1, buildings[2]),Mathf.Pow(1, buildings[3]),Mathf.Pow(1, buildings[4]),Mathf.Pow(1, buildings[5])});
+                return new Resources(new int[]{(int)Mathf.Pow((float)0, buildings[4]), (int)Mathf.Pow((float)0, buildings[2]), (int)Mathf.Pow((float)1.5, buildings[0]),(int)Mathf.Pow((float)1.5, buildings[1]),(int)Mathf.Pow((float)1.5, buildings[1]),(int)Mathf.Pow((float)2, buildings[5])});
             if(planetName == "Dark-Planet")               
-                return new Resources(new int[]{Mathf.Pow(1, buildings[0]), Mathf.Pow(1, buildings[1]),Mathf.Pow(1, buildings[2]),Mathf.Pow(1, buildings[3]),Mathf.Pow(1, buildings[4]),Mathf.Pow(1, buildings[5])});
+                return new Resources(new int[]{(int)Mathf.Pow((float)0, buildings[4]), (int)Mathf.Pow((float)0, buildings[2]), (int)Mathf.Pow((float)2, buildings[0]),(int)Mathf.Pow((float)1.5, buildings[1]+buildings[5]),(int)Mathf.Pow((float)1.5, buildings[1] + buildings[5]),(int)Mathf.Pow((float)1.75, buildings[5])});
             return new Resources();
         }
         public static Resources GetPlanetResourceGeneration(string planetName){
