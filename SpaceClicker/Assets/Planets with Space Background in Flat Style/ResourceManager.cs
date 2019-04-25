@@ -38,7 +38,7 @@ public class ResourceManager : MonoBehaviour
     }
     public void Victory()
     {
-        if(GameObject.Find("Population").GetComponent<Population>().population >= 99)
+        if(GameObject.Find("Population").GetComponent<Population>().population >= 500)
         {
             SceneManager.LoadScene("PopulationVictory");
             Debug.Log("Population Victory");
